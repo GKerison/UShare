@@ -6,7 +6,8 @@
 为进一步简化Android项目的分享，UShare基于友盟分享进一步简化，移除额外的支持平台，移除分享UI的代码，简化分享配置和使用的API，目前支持常用的QQ，微信，新浪相关的图文和网页分享。
 
 ## 分享集成
-1. 在根目录下build.gradle中增加gitpack仓库
+
+1 在根目录下build.gradle中增加gitpack仓库
 ```
 allprojects {
     repositories {
@@ -15,14 +16,15 @@ allprojects {
     }
 }
 ```
-2. 在项目的build.gradle中添加UShare的依赖
+
+2 在项目的build.gradle中添加UShare的依赖
 ```
 dependencies {
     compile 'com.github.GKerison:UShare:v1.0.0'
 }
 ```
 
-3. 在项目的AndroidManifest.xml中增加友盟key和QQ认证的Activity
+3 在项目的AndroidManifest.xml中增加友盟key和QQ认证的Activity
 ```
   <application>
     ...
@@ -32,7 +34,8 @@ dependencies {
     </meta-data>
   </application>
 ```
-4. 【可选】QQ分享需
+
+4 【可选】QQ分享需
   ```
     <application>
       ...
@@ -51,12 +54,14 @@ dependencies {
       </activity>
     </application>
   ```
-5. 【可选】微信分享需要在项目的包下建立wxapi包和WXEntryActivity
+  
+5 【可选】微信分享需要在项目的包下建立wxapi包和WXEntryActivity
   ```
   public class WXEntryActivity extends WXCallbackActivity {
   }
   ```
-6. 项目使用分享前中配置需要使用的分享平台（最好启动页或者Application中）
+  
+6 项目使用分享前中配置需要使用的分享平台（最好启动页或者Application中）
 ```
 new UShareHelper.Builder(Context context)
                 .configQQ(String appId, String appKey)
@@ -65,7 +70,7 @@ new UShareHelper.Builder(Context context)
                 .build();
 ```
 
-7. 使用分享
+7 使用分享
 ```
 UShareHelper.share(Activity activity, SHARE_MEDIA platform, String title, String desc, String image, String url, UMShareListener() {
             @Override
