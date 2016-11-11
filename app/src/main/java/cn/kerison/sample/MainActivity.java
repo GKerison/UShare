@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         new UShareHelper.Builder(this)
                 .configQQ("1103422385", "fVOoRq2llHLt9UZS")
-//                .configSina("", "", "")
-//                .configWeiXin("", "")
+                .configSina("", "", "")
+                .configWeiXin("", "")
                 .build();
 
         findViewById(R.id.btn_share).setOnClickListener(new View.OnClickListener() {
