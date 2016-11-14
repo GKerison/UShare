@@ -21,4 +21,11 @@
         android:text="分享"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_above="@id/btn_share"
+        android:id="@+id/btn_info"
+        android:text="获取授权信息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
